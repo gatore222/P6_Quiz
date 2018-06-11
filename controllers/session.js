@@ -104,7 +104,7 @@ exports.adminAndNotMyselfRequired = function(req, res, next){
  * the password is correct.
  * If the authentication is correct, then the promise is satisfied and returns
  * an object with the User.
- * If the authentication fails, then the promise is also satisfied, but it
+ * If the authentication fails, then the promise is also satisfied, but it
  * returns null.
  */
 const authenticate = (login, password) => {
@@ -148,8 +148,8 @@ exports.create = (req, res, next) => {
     .then(user => {
         if (user) {
             // Create req.session.user and save id and username fields.
-            // The existence of req.session.user indicates that the session exists.
-            // I also save the moment when the session will expire due to inactivity.
+            // The existence of req.session.user indicates that the session exists.
+            // I also save the moment when the session will expire due to inactivity.
             req.session.user = {
                 id: user.id,
                 username: user.username,

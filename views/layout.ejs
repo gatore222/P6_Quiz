@@ -35,7 +35,6 @@
     <nav class="main" id="mainNav" role="navigation">
         <a href="/">Home</a>
         <a href="/quizzes">Quizzes</a>
-
         <% if (session.user) { %>
             <a href="/users/<%= session.user.id %>/quizzes">My Quizzes</a>
         <% } %>
