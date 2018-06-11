@@ -259,8 +259,10 @@ exports.randomplay = (req, res, next) => {
 }
 //GET RANDOM CHECK
 exports.randomcheck = (req, res, next) => {
+
     let limit;
     //const whereOpt = {"id": {[Sequelize.Op.notIn]: req.session.randomplay}};
+
     Sequelize.Promise.resolve()
     .then(() => {
         return models.quiz.count()
